@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите название книги:");
         String title = scanner.nextLine();
@@ -21,8 +21,8 @@ public class Main {
 
         Book book = new Book(title, releaseYear, author, pages);
 
-        System.out.println("Является ли книга большой? " + Book.isBig(pages));
-        System.out.println("Содержит ли книга введённое слово? " + Book.matches(title, word));
-        System.out.println("Цена книги в рублях:  " + Book.estimatePrice(pages));
+        System.out.println("Является ли книга большой? " + book.isBig());
+        System.out.println("Содержит ли книга введённое слово? " + book.matches(word));
+        System.out.println("Цена книги в рублях: " + book.estimatePrice());
     }
 }

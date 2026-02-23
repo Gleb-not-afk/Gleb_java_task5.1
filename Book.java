@@ -1,4 +1,4 @@
-public class Book{
+public class Book {
     String title;
     int releaseYear;
     String author;
@@ -11,27 +11,18 @@ public class Book{
         this.pages = pages;
     }
 
-    public static boolean isBig(int pages){
-        if (pages > 500){
-            return true;
-        }
-        else {
-            return false;
-        }
+    public boolean isBig() {
+        return pages > 500;
     }
-    public static boolean matches(String title, String word){
-        if (title.contains(word)){
-            return true;
-        }
-        else{
-            return false;
-        }
+
+    public boolean matches(String word) {
+        return title.contains(word);
     }
-    public static int estimatePrice(int pages){
-        if (pages * 3 < 250){
+
+    public int estimatePrice() {
+        if (pages * 3 < 250) {
             return 250;
-        }
-        else{
+        } else {
             return (pages * 3);
         }
     }
