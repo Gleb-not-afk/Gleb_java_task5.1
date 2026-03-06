@@ -16,14 +16,14 @@ public class Book {
     }
 
     public boolean matches(String word) {
-        return(title.contains(word) || author.contains(word));
+        return title.contains(word) || author.contains(word);
     }
 
     public int estimatePrice() {
         if (pages * 3 < 250) {
             return 250;
         } else {
-            return (pages * 3);
+            return pages * 3;
         }
     }
 }
